@@ -23,7 +23,7 @@ public class FuncionarioController : ControllerBase
             List<Funcionario>? funcionarios = _ctx.Funcionarios.ToList();
             if(funcionarios == null)
             {
-                return NoContent();
+                return NotFound();
             }
             return Ok(funcionarios);
         }
