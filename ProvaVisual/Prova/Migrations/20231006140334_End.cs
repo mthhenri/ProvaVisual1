@@ -4,7 +4,7 @@
 
 namespace Prova.Migrations
 {
-    public partial class DatabaseConfig : Migration
+    public partial class End : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,6 +36,7 @@ namespace Prova.Migrations
                     ImpostoRenda = table.Column<double>(type: "REAL", nullable: false),
                     INSS = table.Column<double>(type: "REAL", nullable: false),
                     FGTS = table.Column<double>(type: "REAL", nullable: false),
+                    SalarioLiquido = table.Column<double>(type: "REAL", nullable: false),
                     FuncionarioId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

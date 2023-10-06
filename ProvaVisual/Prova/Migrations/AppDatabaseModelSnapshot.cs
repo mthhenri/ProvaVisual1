@@ -46,6 +46,9 @@ namespace Prova.Migrations
                     b.Property<double>("SalarioBruto")
                         .HasColumnType("REAL");
 
+                    b.Property<double>("SalarioLiquido")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("ValorHora")
                         .HasColumnType("REAL");
 

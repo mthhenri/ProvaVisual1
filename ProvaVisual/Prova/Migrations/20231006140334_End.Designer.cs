@@ -10,8 +10,8 @@ using Prova.Data;
 namespace Prova.Migrations
 {
     [DbContext(typeof(AppDatabase))]
-    [Migration("20231006132245_DatabaseConfig")]
-    partial class DatabaseConfig
+    [Migration("20231006140334_End")]
+    partial class End
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,9 @@ namespace Prova.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<double>("SalarioBruto")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("SalarioLiquido")
                         .HasColumnType("REAL");
 
                     b.Property<double>("ValorHora")
