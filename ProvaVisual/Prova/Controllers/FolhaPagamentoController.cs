@@ -2,14 +2,14 @@
 using Prova.Data;
 
 namespace Prova.Controllers;
-public class FuncionarioController : ControllerBase
+public class FolhaPagamentoController : ControllerBase
 {
     private readonly AppDatabase _ctx;
-    public FuncionarioController(AppDatabase ctx)
+    public FolhaPagamentoController(AppDatabase ctx)
     {
         _ctx = ctx;
     }
 
-    //Metodos
 
+    //Metodos
 }
