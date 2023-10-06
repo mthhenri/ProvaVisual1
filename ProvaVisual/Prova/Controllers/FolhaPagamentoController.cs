@@ -18,23 +18,28 @@ namespace Prova.Controllers
 
 
         [HttpPost("criar")]
-        public IActionResult CriarFuncionario([FromBody] FuncionarioDTO funcionarioDTO)
+        public IActionResult CriarFolha([FromBody] FolhaPagamentoDTO folhaPagamentoDTO)
         {
-            if (funcionarioDTO == null)
+            if (folhaPagamentoDTO == null)
             {
                 return BadRequest("Dados inválidos");
             }
 
-            var funcionario = new Funcionario
+        Funcionario? funcionario = _ctx.Funcionarios.FirstOrDefault(f => f.FuncionarioId == folhaPagamentoDTO.FuncionarioId);
+
+        if (funcionario == null)
             {
-                Nome = funcionarioDTO.Nome,
-                CPF = funcionarioDTO.CPF
+                return NotFound("Funcionário não encontrado");
+            }
+            var folhaPagamento = new FolhaPagamento
+            {
+            FuncionarioId = folhaPagamentoDTO.FuncionarioId,
             };
 
-            _ctx.Funcionarios.Add(funcionario);
+            _ctx.Folhas.Add(folhaPagamento);
             _ctx.SaveChanges();
 
-            return Created("Folha de pagamento criada com sucesso!", funcionario);
+            return Ok("Folha de pagamento criada com sucesso!");
         }
 
         [HttpGet("listar")]
