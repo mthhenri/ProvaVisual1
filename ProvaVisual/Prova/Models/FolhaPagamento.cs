@@ -1,6 +1,9 @@
-﻿namespace Prova.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Prova.Models;
 public class FolhaPagamento
 {
+    [Key]
     public int FolhaId { get; set; }
     public double ValorHora { get; set; }
     public int QuantidadeHoras { get; set; }
