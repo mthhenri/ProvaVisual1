@@ -44,8 +44,8 @@ namespace Prova.Controllers
             return Ok(folhas);
         }
 
-        [HttpGet("listarPorCpfMesAno")]
-        public IActionResult ListarFolhaPorCpfMesAno(string cpf, int mes, int ano)
+        [HttpGet("buscar")]
+        public IActionResult BuscarFolhaPorCpfMesAno(string cpf, int mes, int ano)
         {
         var funcionario = _ctx.Funcionarios.FirstOrDefault(f => f.CPF == cpf);
 
