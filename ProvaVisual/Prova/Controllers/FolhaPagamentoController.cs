@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Prova.Controllers; 
+using Prova.Controllers;
+using Prova.Data;
+using Prova.DTOs;
+using Prova.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,9 +13,9 @@ namespace Prova.Controllers
     [ApiController]
     public class FolhaPagamentoController : ControllerBase
     {
-        private readonly ContextoDb _ctx; 
+        private readonly AppDatabase _ctx; 
 
-        public FolhaPagamentoController(ContextoDb ctx)
+        public FolhaPagamentoController(AppDatabase ctx)
         {
             _ctx = ctx;
         }
