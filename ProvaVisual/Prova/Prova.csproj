@@ -19,6 +19,8 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Tests\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 
 </Project>
