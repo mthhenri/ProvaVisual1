@@ -12,6 +12,7 @@ public class FolhaPagamento
  public double ImpostoRenda  { get; set; }
  public double INSS { get; set; }
  public double FGTS { get; set; }
+ public Funcionario Funcionario { get; set; }
  public int FuncionarioId { get; set; }
  
 }
